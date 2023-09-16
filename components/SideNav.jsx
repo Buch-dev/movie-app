@@ -3,7 +3,7 @@ import React from 'react'
 
 const SideNav = () => {
   return (
-    <div>
+    <div className='hidden md:block'>
         <div className="w-[226px] h-[982px] rounded-r-[45px] border">
         <div className="flex gap-3 items-center w-[186px] mx-auto mt-[52px]">
           <Image src="/img/tv.png" alt="logo" width={50} height={50} />

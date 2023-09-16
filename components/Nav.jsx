@@ -17,7 +17,7 @@ const Nav = () => {
   }
 
   return (
-    <div className="container flex justify-between pt-[15px]">
+    <div className="container flex justify-between items-center pt-[15px]">
       <div className="logo">
         <Image src="/img/Logo.png" alt="logo" width={168} height={50} />
       </div>

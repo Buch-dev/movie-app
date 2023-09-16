@@ -54,7 +54,7 @@ const SearchResults = ({ searchText, movies }) => {
           <option value="vote_average" className="px-4 py-2">ratings</option>
         </select>
       </div>
-      <div className="grid grid-cols-4 gap-4 mt-10 container">
+      <div className="grid md:grid-cols-4 gap-4 mt-10 container">
         {filteredMovies.map(movie => {
           return <Card key={movie.id} movie={movie} />;
         })}

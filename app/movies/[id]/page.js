@@ -18,7 +18,7 @@ async function MovieDetailsPage({ params }) {
     <div>
       <div class="flex">
         <SideNav />
-        <div class="img w-[1198px] p-14">
+        <div class="img w-full md:w-[1198px] p-5 md:p-14">
           <img
             src={IMAGE_BASE_URL + movieDetails.poster_path}
             className="w-full h-[449px] rounded-[20px] mr-[37px]"
@@ -63,7 +63,7 @@ async function MovieDetailsPage({ params }) {
       {/* Similar Movies */}
       <div className="container mt-5">
         <h2 className="text-4xl text-center">Similar Movies</h2>
-        <div className="grid grid-cols-4 gap-4 mt-10">
+        <div className="grid md:grid-cols-4 gap-4 mt-10">
           {similarMovies.map(movie => {
             return (
               <div className="border">
