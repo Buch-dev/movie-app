@@ -27,10 +27,17 @@ export const getMovies = async (query) => {
 };
 
 export const getMovieDetails = async (id) => {
-  const res = await fetch(`${BASE_URL}/movie/${id}?api_key=${API_KEY}`);
+  const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
+  const BASE_URL = 'https://api.themoviedb.org/3';
+  const LANGUAGE = 'en-US';
+
+  const url = `${BASE_URL}/movie/${id}?api_key=${API_KEY}&language=${LANGUAGE}`;
+
+  const res = await fetch(url);
   const data = await res.json();
   return data;
 };
+
 
 export const getSimilarMovies = async (id) => {
   const res = await fetch(`${BASE_URL}/movie/${id}/similar?api_key=${API_KEY}`);

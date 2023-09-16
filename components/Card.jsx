@@ -26,34 +26,36 @@ const Card = ({ movie }) => {
 
   return (
     <div className={`relative ${isFavorite ? 'bg-gold' : 'bg-white'}`}>
-      <button
-        onClick={toggleFavorite}
-        className="absolute top-2 right-2 text-xl text-red-500"
-      >
-        <AiOutlineHeart className={`${isFavorite ? 'text-red-500' : 'text-gray-500'}`} />
-      </button>
-      <Link href={`/movies/${movie.id}`}>
-        <div>
-          <img
-            src={IMAGE_BASE_URL + movie.poster_path}
-            alt="movie-path"
-            data-testid="movie-poster_path"
-            className="w-full"
-          />
-          <h5
-            data-testid="movie-title"
-            className="text-[#111827] text-lg font-bold my-3"
-          >
-            {movie.title}
-          </h5>
-          <p
-            data-testid="movie-release-date"
-            className="mt-3 text-[#9CA3AF] font-bold text-xs"
-          >
-            Release Date: {formatReleaseDate(movie.release_date)}
-          </p>
-        </div>
-      </Link>
+      <div data-testid="movie-card">
+        <button
+          onClick={toggleFavorite}
+          className="absolute top-2 right-2 text-xl text-red-500"
+        >
+          <AiOutlineHeart className={`${isFavorite ? 'text-red-500' : 'text-gray-500'}`} />
+        </button>
+        <Link href={`/movies/${movie.id}`}>
+          <div>
+            <img
+              src={IMAGE_BASE_URL + movie.poster_path}
+              alt="movie-path"
+              data-testid="movie-poster_path"
+              className="w-full"
+            />
+            <h5
+              data-testid="movie-title"
+              className="text-[#111827] text-lg font-bold my-3"
+            >
+              {movie.title}
+            </h5>
+            <p
+              data-testid="movie-release-date"
+              className="mt-3 text-[#9CA3AF] font-bold text-xs"
+            >
+              Release Date: {formatReleaseDate(movie.release_date)}
+            </p>
+          </div>
+        </Link>
+      </div>
     </div>
   );
 };

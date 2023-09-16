@@ -5,7 +5,7 @@ export const formatReleaseDate = (releaseDate) => {
     return date.toLocaleDateString("en-US", {
       timeZone: "UTC",
       year: "numeric",
-      month: "numeric",
+      month: "long",
       day: "numeric",
     });
   };
