@@ -1,7 +1,10 @@
 import SideNav from "@/components/SideNav";
+import { formatReleaseDate } from "@/utils/constant";
 import { getMovieDetails, getSimilarMovies } from "@/utils/request";
 import Image from "next/image";
 import React from "react";
+
+
 
 async function MovieDetailsPage({ params }) {
   const IMAGE_BASE_URL = "https://www.themoviedb.org/t/p/w220_and_h330_face";
@@ -22,7 +25,7 @@ async function MovieDetailsPage({ params }) {
             <h3 data-testid="movie-title" className="mr-2">
               {movieDetails.title} |
             </h3>
-            <p data-testid="movie-release-date">{movieDetails.release_date}</p>
+            <p data-testid="movie-release-date">{formatReleaseDate(movieDetails.release_date)}</p>
           </div>
 
           <p
