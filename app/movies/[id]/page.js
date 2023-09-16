@@ -20,7 +20,7 @@ async function MovieDetailsPage({ params }) {
         <SideNav />
         <div class="img w-full md:w-[1198px] p-5 md:p-14">
           <img
-            src={IMAGE_BASE_URL + movieDetails.poster_path}
+            src={IMAGE_BASE_URL + movieDetails.backdrop_path}
             className="w-full h-[449px] rounded-[20px] mr-[37px]"
             data-testid="movie-poster_path"
           />
