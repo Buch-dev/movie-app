@@ -5,14 +5,14 @@ import React from "react";
 
 async function MovieDetailsPage({ params }) {
   // imitate delay
-  await new Promise((resolve) => setTimeout(resolve, 3000));
+  await new Promise(resolve => setTimeout(resolve, 3000));
 
   const IMAGE_BASE_URL = "https://www.themoviedb.org/t/p/w220_and_h330_face";
   const movieDetails = await getMovieDetails(params.id);
   const similarMovies = await getSimilarMovies(params.id);
   console.log(movieDetails);
 
-  const formatDateToUTC = (dateString) => {
+  const formatDateToUTC = dateString => {
     const date = new Date(dateString);
     return date.toISOString().slice(0, 19).replace("T", " ");
   };
@@ -31,9 +31,7 @@ async function MovieDetailsPage({ params }) {
             <h3 data-testid="movie-title" className="mr-2">
               {movieDetails.title} |
             </h3>
-            <p data-testid="movie-release-date">
-              {movieDetails.release_date}
-            </p>
+            <p data-testid="movie-release-date">{new Date(movieDetails.release_date).toUTCString()}</p>
           </div>
 
           <p
@@ -44,7 +42,7 @@ async function MovieDetailsPage({ params }) {
           </p>
           <div>
             <p className="flex gap-4 mt-9">
-              {movieDetails.genres.map((genre) => {
+              {movieDetails.genres.map(genre => {
                 return (
                   <span
                     key={genre.id}
@@ -69,17 +67,22 @@ async function MovieDetailsPage({ params }) {
       <div className="container mt-5">
         <h2 className="text-4xl text-center">Similar Movies</h2>
         <div className="grid md:grid-cols-4 gap-4 mt-10">
-          {similarMovies.map((movie) => {
+          {similarMovies.map(movie => {
             return (
               <div className="border" key={movie.id}>
                 <img
                   src={IMAGE_BASE_URL + movie.poster_path}
                   className="w-full"
-                  alt={movie.title}
+                  alt={movie.poster_path}
+                  data-testid="movie-poster"
                 />
-                <h5 className="mt-4 text-[#333] font-bold text-lg">
+                <h5
+                  data-testid="movie-title"
+                  className="mt-4 text-[#333] font-bold text-lg"
+                >
                   {movie.title}
                 </h5>
+                <p data-testid="movie-release-date">{movie.release_date}</p>
               </div>
             );
           })}
