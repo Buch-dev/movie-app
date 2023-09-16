@@ -37,7 +37,7 @@ const Card = ({ movie }) => {
           <div>
             <img
               src={IMAGE_BASE_URL + movie.poster_path}
-              alt="movie-path"
+              alt="movie-poster"
               data-testid="movie-poster"
               className="w-full"
             />
