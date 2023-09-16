@@ -7,6 +7,9 @@ import React from "react";
 
 
 async function MovieDetailsPage({ params }) {
+  // imitate delay
+  await new Promise(resolve => setTimeout(resolve, 3000))
+
   const IMAGE_BASE_URL = "https://www.themoviedb.org/t/p/w220_and_h330_face";
   const movieDetails = await getMovieDetails(params.id);
   const similarMovies = await getSimilarMovies(params.id);

@@ -30,11 +30,11 @@ const SideNav = () => {
               height={25}
             />
             <p className="text-[#666] text-xl font-semibold ml-[15px] py-7 hover:text-[#BE123C]">
-              Upcomimg
+              Upcoming
             </p>
           </div>
         </div>
-        <div className="pt-[42px] pb-4 px-4 w-[170px] mx-auto rounded-[20px] border-[#BE123CB2] border">
+        <div className="pt-[42px] pb-4 px-4 mt-[78px] w-[170px] mx-auto rounded-[20px] border-[#BE123CB2] border">
           <p className="text-[#333333CC] text-[15px] font-semibold items-center flex flex-col justify-center">
             Play movie quizes and earn free tickets
           </p>
