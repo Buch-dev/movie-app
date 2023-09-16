@@ -57,7 +57,7 @@ const Nav = () => {
 
       <div className="md:flex items-center space-x-6 mt-4 md:mt-0">
         <button className="text-white font-bold">Sign In</button>
-        <div className="menu-btn flex items-center justify-center bg-[#BE123C] rounded-[50%] w-9 h-9">
+        <div className="menu-btn hidden md:flex items-center justify-center bg-[#BE123C] rounded-[50%] w-9 h-9">
           <Image
             src="/img/Menu.png"
             alt="menu"
