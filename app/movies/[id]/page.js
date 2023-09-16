@@ -51,6 +51,12 @@ async function MovieDetailsPage({ params }) {
               })}
             </p>
           </div>
+          <p
+            data-testid="movie-runtime"
+            className="text-[#333] text-[20px] mt-[25px]"
+          >
+            {movieDetails.runtime} minutes
+          </p>
         </div>
       </div>
 

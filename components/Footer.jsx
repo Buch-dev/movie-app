@@ -10,12 +10,12 @@ const Footer = () => {
             <Image src='/img/fa-brands_twitter.png' alt='facebook' width={24} height={24} />
             <Image src='/img/fa-brands_youtube.png' alt='facebook' width={24} height={21.333} />
         </div>
-        <div className="my-9 grid grid-cols-3 gap-12 w-[492px] mx-auto">
+        <div className="my-9 grid border md:grid-cols-3 gap-12 md:w-[492px] mx-auto">
             <p className='text-lg font-bold'>Conditions of Use</p>
             <p className='text-lg font-bold'>Privacy & Policy</p>
             <p className='text-lg font-bold'>Press Room</p>
         </div>
-        <div className="copyright">
+        <div className="copyright pb-5">
             <Image src='/img/copyright.png' alt='copyright' width={366} height={23} className='mx-auto' />
         </div>
     </div>

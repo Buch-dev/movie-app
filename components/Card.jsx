@@ -52,12 +52,6 @@ const Card = ({ movie }) => {
           >
             Release Date: {formatReleaseDate(movie.release_date)}
           </p>
-          <p
-            data-testid="movie-runtime"
-            className="mt-3 text-[#9CA3AF] font-bold text-xs"
-          >
-            {movie.runtime} minutes
-          </p>
         </div>
       </Link>
     </div>
