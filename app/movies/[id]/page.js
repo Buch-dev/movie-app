@@ -22,7 +22,7 @@ async function MovieDetailsPage({ params }) {
           <img
             src={IMAGE_BASE_URL + movieDetails.backdrop_path}
             className="w-full h-[449px] rounded-[20px] mr-[37px]"
-            data-testid="movie-poster_path"
+            data-testid="movie-poster"
           />
           <div className="flex text-[#404040] text-2xl font-medium mt-8">
             <h3 data-testid="movie-title" className="mr-2">
