@@ -32,7 +32,7 @@ async function MovieDetailsPage({ params }) {
               {movieDetails.title} |
             </h3>
             <p data-testid="movie-release-date">
-              {formatDateToUTC(movieDetails.release_date)}
+              {movieDetails.release_date}
             </p>
           </div>
 
